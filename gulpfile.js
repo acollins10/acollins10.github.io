@@ -29,11 +29,7 @@ gulp.task('vendor', function() {
 
   // Font Awesome
   gulp.src([
-      './node_modules/font-awesome/**/*',
-      '!./node_modules/font-awesome/{less,less/*}',
-      '!./node_modules/font-awesome/{scss,scss/*}',
-      '!./node_modules/font-awesome/.*',
-      '!./node_modules/font-awesome/*.{txt,json,md}'
+      './node_modules/@fortawesome/fontawesome-free/**/*'
     ])
     .pipe(gulp.dest('./vendor/font-awesome'))
 
@@ -49,12 +45,6 @@ gulp.task('vendor', function() {
       './node_modules/jquery.easing/*.js'
     ])
     .pipe(gulp.dest('./vendor/jquery-easing'))
-
-  // Magnific Popup
-  gulp.src([
-      './node_modules/magnific-popup/dist/*'
-    ])
-    .pipe(gulp.dest('./vendor/magnific-popup'))
 
 });
 
